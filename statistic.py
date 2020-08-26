@@ -47,10 +47,10 @@ def statistic_in_folder(path):
  
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-d', '--root_path', default='./')
+    parser.add_argument('-r', '--root_path', default='./')
     args = parser.parse_args()
-    path = args.root_file
+    root_path = args.root_path
     result = Result()
-    result += statistic_in_folder(path)
-    print 'root path: ', path
+    result += statistic_in_folder(root_path)
+    print 'root path: ', root_path
     result.printf()
